@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Infinity Kingdom · Wisdom Palace</title><style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Infinity Kingdom · Wisdom Palace</title><style>
 *{box-sizing:border-box}body{margin:0;background:#101829;color:#eef2fc;font:16px/1.45 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:22px}h1{margin:0;font-size:clamp(24px,5vw,36px)}p{margin:8px 0;color:#c3cde0}a{color:#a6d0ff}.search{position:sticky;top:0;background:#101829;padding:10px 0;display:flex;gap:8px;align-items:center;z-index:1}input{min-width:0;flex:1;background:#1d2a42;border:1px solid #64779c;border-radius:8px;color:white;font:inherit;padding:10px}button{background:#293959;border:1px solid #64779c;border-radius:8px;color:white;font:inherit;padding:10px;cursor:pointer}.modes{margin:0 0 8px}.modes button{padding:5px 9px}.modes [aria-pressed="true"]{background:#48619a}.count{font-variant-numeric:tabular-nums}table{width:100%;border-collapse:collapse;text-align:left}td,th{padding:8px 10px;border-bottom:1px solid #35435d;vertical-align:top}thead{color:#c3cde0}td:first-child{width:62%}strong{color:#8ff4cd}.group{background:#222f49;color:#c7d9ff}.sources{margin-top:20px;font-size:.9rem}[hidden]{display:none!important}@media(max-width:550px){main{padding:12px}td,th{padding:7px 5px}td:first-child{width:57%}}@media print{body,.group{background:white;color:black}strong,p,a,thead{color:black}.search,.modes,.language{display:none}tr{break-inside:avoid}}
 .language{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin:0 0 12px}select{background:#1d2a42;color:#fff;border:1px solid #64779c;border-radius:8px;padding:7px;font:inherit}td.wrap,td{overflow-wrap:anywhere}.empty{padding:12px 0}</style></head>
 <body><main>
@@ -27,7 +27,7 @@ let mode='all';
 let stored;
 try{stored=localStorage.getItem('infinity-quiz-lang')}catch{}
 const selected=new URLSearchParams(location.search).get('lang');
-lang.value=langOrder.includes(selected)?selected:langOrder.includes(stored)?stored:'ru';
+lang.value=langOrder.includes(selected)?selected:langOrder.includes(stored)?stored:'en';
 function render(){
  const l=langOrder.indexOf(lang.value), words=norm(search.value).split(' ').filter(Boolean), fragment=document.createDocumentFragment();
  let n=0,index=0,group='',showGroup=false;
